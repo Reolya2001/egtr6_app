@@ -1,3 +1,6 @@
+cd /mnt/c/Users/User/Desktop/egtr6_app
+rm -f Dockerfile
+cat > Dockerfile << 'EOF'
 FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -35,3 +38,4 @@ WORKDIR /app
 COPY . /app
 
 CMD ["buildozer", "android", "debug"]
+EOF
